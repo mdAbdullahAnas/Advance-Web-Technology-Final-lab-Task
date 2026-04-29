@@ -1,23 +1,19 @@
-import PropTypes from "prop-types";
-
-function StudentCard({ name, id, avatar, gpa, major }) {
+function StudentCard({ student, isFavorite, toggleFavorite }) {
   return (
     <div className="card">
-      <img src={avatar} alt={name} width="100" />
-      <h2>{name}</h2>
-      <p>ID: {id}</p>
-      <p>Major: {major}</p>
-      <p>GPA: {gpa}</p>
+      <h3>{student.name}</h3>
+      <p>ID: {student.id}</p>
+      <p>Major: {student.major}</p>
+      <p>GPA: {student.gpa}</p>
+
+      <button
+  className={isFavorite ? "active" : ""}
+  onClick={() => toggleFavorite(student.id)}
+>
+  {isFavorite ? "★ Favorite" : "☆ Add Favorite"}
+</button>
     </div>
   );
 }
-
-StudentCard.propTypes = {
-  name: PropTypes.string,
-  id: PropTypes.string,
-  avatar: PropTypes.string,
-  gpa: PropTypes.number,
-  major: PropTypes.string,
-};
 
 export default StudentCard;

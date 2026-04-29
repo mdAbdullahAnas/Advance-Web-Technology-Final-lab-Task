@@ -1,8 +1,8 @@
-function DashboardHeader() {
+function DashboardHeader({ totalFavorites }) {
   return (
-    <div>
+    <div className="header">
       <h1>Student Dashboard</h1>
-      <p>Manage student data easily</p>
+      <p>Favorites: {totalFavorites}</p>
     </div>
   );
 }
