@@ -20,6 +20,12 @@ function App() {
         { id: "102", name: "Rahim", gpa: 3.5, major: "EEE" },
         { id: "103", name: "Karim", gpa: 3.9, major: "BBA" },
         { id: "104", name: "Sadia", gpa: 3.7, major: "CSE" },
+        { id: "105", name: "Tania", gpa: 3.6, major: "BBA" },
+        { id: "106", name: "Omar", gpa: 3.8, major: "EEE" },
+        { id: "107", name: "Laila", gpa: 3.9, major: "CSE" },
+        { id: "108", name: "Nabil", gpa: 3.5, major: "BBA" },
+        { id: "109", name: "Fariha", gpa: 3.8, major: "EEE" },
+        { id: "110", name: "Tamim", gpa: 3.7, major: "CSE" },
       ]);
       setLoading(false);
     }, 1500);

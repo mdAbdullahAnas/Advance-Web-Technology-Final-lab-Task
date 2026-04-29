@@ -1,10 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./styles/main.css"; // CSS import এখানে বা App এ দিতে পারো
+import { ThemeProvider } from "./context/ThemeContext";
+import { StudentProvider } from "./context/StudentContext";
+import "./styles/main.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <StudentProvider>
+        <App />
+      </StudentProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
